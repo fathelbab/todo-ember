@@ -1,0 +1,13 @@
+<h1>Todo app</h1>
+<TodoApp @model={{this.model}} />
+{{log @model}}
+<ul>
+  {{#each @model as |item|}}
+    <li>{{item.todo}}</li>
+  {{/each}}
+</ul>
+<form onsubmit={{fn this.onSubmit @model}}>
+  <input type='text' placeholder='Add todo' value={{this.text.todo}}onChange={{ e => this.handleChange(e)}} />
+
+  <button type='submit'></button>
+</form>
