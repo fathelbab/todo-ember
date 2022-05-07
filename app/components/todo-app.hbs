@@ -1,1 +1,10 @@
-<p>testing check</p>
+<form onsubmit={{fn this.submit @model}}>
+  <input
+    type='text'
+    placeholder='Add todo'
+    value={{this.text.todo}}
+    onchange={{this.onChange}}
+  />
+
+  <button type='submit'></button>
+</form>
